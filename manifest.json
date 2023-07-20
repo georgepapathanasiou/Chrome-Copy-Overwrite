@@ -6,6 +6,7 @@
   "icons": {
     "48": "icon.png"
   },
+  "author": "George Papathanasiou, Aris Neos",
   "permissions": [
     "activeTab",
     "clipboardWrite"
