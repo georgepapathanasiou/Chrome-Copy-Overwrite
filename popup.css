@@ -1,0 +1,12 @@
+.copyButton {
+    border-radius: 1rem;
+    padding: 1px 1px 1px 1px;
+}
+
+.container {
+    width: 250px;
+    height: 200px;
+    min-width: 100%;
+    min-height: auto;
+    color: #333333
+}
