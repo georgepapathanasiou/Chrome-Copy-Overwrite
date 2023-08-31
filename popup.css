@@ -1,14 +1,104 @@
-.copyButton {
-    border-radius: 1rem;
-    padding: 1px 1px 1px 1px;
-    background-color: black;
-    color: white;
+/* Styling for the body element to create a background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00A896, #01579b); /* Green to blue gradient */
+    color: #fff; /* White text color */
+    font-family: 'Helvetica Neue', sans-serif; /* Change font-family to your preferred style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Updated styles for container */
+  .container {
+    width: 300px;
+    max-width: 80%;
+    padding: 20px;
+    color: #fff; /* White text color */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 20px; /* Make the container round by setting the border-radius */
+    border: none; /* Remove the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+  }
+  
+  /* Updated styles for copyButton */
+  #copyButton {
+    border-radius: 50px; /* Make the button fully round by setting a large border-radius */
+    padding: 15px 30px; /* Increased padding for a slightly larger button */
+    background-color: #00A896; /* Green background color for the button */
+    color: #fff; /* White text color for the button */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Slightly increased font size for better visibility */
+    font-weight: bold; /* Add font weight to make it bold */
+    text-transform: uppercase; /* Uppercase text for a more prominent look */
+    margin-top: 20px; /* Adjusted margin from the highlighted text */
+    display: inline-block; /* Display inline to fit nicely within the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+  }
+  
+  #copyButton:hover {
+    background-color: #028090; /* Darker green on hover */
+  }
+  
+  /* Decorative element */
+  .decorative-element {
+    width: 80px;
+    height: 80px;
+    background-color: #028090; /* Dark green */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  
+  /* Curved text effect */
+  .curved-text {
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .curved-text::before {
+    content: "DESIGN";
+    position: absolute;
+    top: -60px;
+    right: -40px;
+    font-size: 28px;
+    font-weight: bold;
+    transform: rotate(30deg);
+    color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main heading style */
+  .main-heading {
+    /* ... previous styles ... */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Additional decorative lines */
+  .decorative-line {
+    width: 50px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 10px auto;
+  }
+  
+  /* Highlighted text */
+.highlight-text {
+  font-size: 22px; /* Adjusted font size for the highlighted text */
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
-
-.container {
-    width: 250px;
-    height: 200px;
-    min-width: 100%;
-    min-height: auto;
-    color: #333333
-}
+  
+  /* Flex container for alignment */
+  .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  

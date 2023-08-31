@@ -21,13 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
 function copyToChatGPT(text) {
   // Write the highlighted text to the clipboard
   navigator.clipboard.writeText(text).then(function () {
-    alert("Highlighted text copied to Clipboard!");
+    // No alert here, the message won't be displayed as an alert
+    // You can add any other custom logic or UI feedback here if needed
   });
 }
 
-// Listen for the keyboard shortcut and trigger the copy action
+// Listen for the custom keyboard shortcut and trigger the copy action
 chrome.commands.onCommand.addListener(function (command) {
-  if (command === "copy_to_chat_gpt") {
+  if (command === "custom_copy_command") { // Updated to match the custom command name
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { action: "getSelectedText" }, function (response) {
         var highlightedText = response ? response.text : "";

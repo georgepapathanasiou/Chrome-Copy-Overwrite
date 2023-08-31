@@ -4,7 +4,7 @@
   "version": "1.4",
   "description": "Copy highlighted text to clipboard directly.",
   "icons": {
-    "48": "icon.png"
+    "48": "cow.png"
   },
   "author": "George Papathanasiou, Aris Neos",
   "permissions": [
@@ -15,10 +15,10 @@
     "default_popup": "popup.html"
   },
   "commands": {
-    "copy_to_chat_gpt": {
+    "copy_to_clipboard": {
       "suggested_key": {
-        "default": "Ctrl+Shift+C",
-        "mac": "MacCtrl+Shift+C"
+        "default": "Ctrl+1",
+        "mac": "Ctrl+1 "
       },
       "description": "Copy highlighted text to clipboard directly."
     }
@@ -28,5 +28,6 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "default_popup": "popup.html"
 }
