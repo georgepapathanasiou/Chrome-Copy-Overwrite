@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Add event listener to the copy button
         var copyButton = document.getElementById("copyButton");
         copyButton.addEventListener("click", function () {
-          copyToChatGPT(highlightedText);
+          CopyToClipboard(highlightedText);
         });
       } else {
         document.getElementById("highlightedText").innerText = "No text highlighted.";
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function copyToChatGPT(text) {
+function CopyToClipboard(text) {
   // Write the highlighted text to the clipboard
   navigator.clipboard.writeText(text).then(function () {
     // No alert here, the message won't be displayed as an alert
@@ -33,7 +33,7 @@ chrome.commands.onCommand.addListener(function (command) {
       chrome.tabs.sendMessage(tabs[0].id, { action: "getSelectedText" }, function (response) {
         var highlightedText = response ? response.text : "";
         if (highlightedText) {
-          copyToChatGPT(highlightedText);
+          CopyToClipboard(highlightedText);
         }
       });
     });
