@@ -28,6 +28,5 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "default_popup": "popup.html"
+  ]
 }

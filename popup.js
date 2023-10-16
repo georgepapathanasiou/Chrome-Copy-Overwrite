@@ -8,8 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add event listener to the copy button
         var copyButton = document.getElementById("copyButton");
+        var copySuccess = document.querySelector(".copy-success");
         copyButton.addEventListener("click", function () {
           CopyToClipboard(highlightedText);
+          // Show the success message
+           copySuccess.style.display = "block";
+
+          // Trigger the animation
+          copyButton.disabled = true; // Disable the button during the animation
+          setTimeout(function () {
+          // Hide the success message and enable the button after a delay
+          copySuccess.style.display = "none";
+          copyButton.disabled = false;
+    }, 2000);
+
         });
       } else {
         document.getElementById("highlightedText").innerText = "No text highlighted.";

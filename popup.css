@@ -101,4 +101,11 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  /* CSS for hiding the success message */
+.copy-success {
+  display: none;
+  color: #00A896; /* Green color for the success message */
+  font-weight: bold;
+}
   
